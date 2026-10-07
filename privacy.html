@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — VTC</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .legal-content {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 100px 24px 120px;
+    }
+    .legal-content h1 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+    .legal-content h2 {
+      font-size: 20px;
+      margin-top: 40px;
+      margin-bottom: 16px;
+    }
+    .legal-content p {
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+    }
+    .legal-content ul {
+      margin-bottom: 24px;
+      margin-left: 20px;
+      color: var(--text-secondary);
+    }
+    .legal-content li {
+      margin-bottom: 8px;
+    }
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg class="nav-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="10" fill="var(--accent)"/>
+          <rect x="16" y="9" width="8" height="14" rx="4" fill="white"/>
+          <path d="M11 21c0 4.97 4.03 9 9 9s9-4.03 9-9" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <line x1="20" y1="30" x2="20" y2="35" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <line x1="16" y1="35" x2="24" y2="35" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>VTC</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="legal-content">
+    <a href="index.html" class="back-home">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to home
+    </a>
+
+    <h1>VTC Privacy Policy</h1>
+
+    <p>Last updated: October 7, 2026</p>
+
+    <p>VTC is an Android dictation app. You speak, VTC turns your speech into text <strong>on your phone</strong>, and types it into the app you're using.</p>
+
+    <h2>What stays on your phone</h2>
+    <ul>
+      <li><strong>Your voice.</strong> Speech is transcribed on the phone by a speech model you download once. Audio is never sent anywhere (unless you set up your own server, below).</li>
+      <li><strong>Your words.</strong> Dictated text, your dictation history, dictionary, learned fixes, snippets and styles are stored only on the phone. VTC does not save dictation history for password fields.</li>
+      <li><strong>The VTC keyboard</strong> learns words you type and which words you use together, to suggest them. That stays on the phone (never uploaded), and nothing you type or dictate is learned in private/incognito fields or password fields. If you turn on “Learn names from contacts” in its settings (off by default), it reads only your contacts’ first and last names to suggest them; the names stay on the phone and are never uploaded.</li>
+      <li><strong>✦ Polish</strong> rewrites text on the phone (a downloaded model or Google's on-device Gemini Nano), unless you connect your own server (below).</li>
+    </ul>
+
+    <h2>What VTC sends to the developer: diagnostics</h2>
+    <p>To find and fix problems, VTC sends diagnostics to the developer's server over HTTPS. This is <strong>on by default</strong> and you can turn it off at any time in <strong>Settings → Privacy → "Send diagnostics to the developer"</strong>. It contains:</p>
+    <ul>
+      <li>timings (how long recording, transcription and typing took) and error codes</li>
+      <li>short notes about what happened (for example "the app dropped the text", "model still loading")</li>
+      <li>the package name of the app you dictated into (for example <code>com.whatsapp</code>)</li>
+      <li>how speech-model downloads and installs went (how long each step took, and any error)</li>
+      <li>how fast VTC Keyboard is: how long it took to appear and to show suggestions, glide and screen-drawing times, how many suggestion updates there were (never which keys or words), and the package name of the app you typed in</li>
+      <li>crash reports (error type, where in VTC's code it happened, and a short error message with quoted text removed)</li>
+      <li>phone model, Android version, VTC version, and a random ID created when VTC was installed (not linked to you, your account or your phone's hardware IDs)</li>
+    </ul>
+    <p>Diagnostics <strong>never</strong> include your audio, your dictated text, or anything else you type. They are used only to fix bugs and improve VTC, are not sold, and are not shared with anyone else.</p>
+
+    <h2>Accessibility service</h2>
+    <p>VTC uses Android's Accessibility service so it can type into other apps. It reads which app is open and the text box you're in (including the text already in it) only to put your words in the right place. It does not record your screen, track what you type yourself, or collect screen content. The only accessibility-derived data that leaves the phone is the package name of the app you dictated into, as part of diagnostics above. VTC shows this explanation and asks you to agree before you turn the service on.</p>
+
+    <h2>Downloads</h2>
+    <p>Speech models are downloaded from the official sherpa-onnx releases on GitHub, and optional ✦ Polish models from Hugging Face. These downloads send nothing about you beyond a normal web request.</p>
+
+    <h2>Optional: your own server</h2>
+    <p>Under Settings you can connect a server you run yourself:</p>
+    <ul>
+      <li><strong>Advanced → server transcription:</strong> your audio is sent to the address you enter instead of being transcribed on the phone.</li>
+      <li><strong>✦ Polish → Home server:</strong> the text being polished is sent to the address you enter.</li>
+    </ul>
+    <p>VTC has no built-in server for either; nothing is sent unless you enter your own.</p>
+
+    <h2>Backups</h2>
+    <p><strong>Settings → Advanced → Backup</strong> saves your settings, dictionary, learned fixes, snippets, styles, dictation history and, if set, your ✦ Polish home-server key into one file. The file goes only where you choose to save or send it. Treat it like a private document.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy: <a href="mailto:mendy@selleroptimization.net">mendy@selleroptimization.net</a></p>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <span class="sep">·</span>
+                <a href="mailto:mendy@selleroptimization.net">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
